@@ -1,0 +1,166 @@
+.top-nav {
+  text-decoration: none;
+  width: 100%;
+  z-index: -1;
+  background-color: #87bdd8;
+  height: 6vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  background-color: #8c99e0;
+  box-shadow: 5px 3px 5px #f2f4fc;
+  box-shadow: 0 0px 15px #8c99e0;
+
+  /* box-shadow: 0 1px 1px #7f89be,
+              0 2px 2px #7f89be,  */
+}
+
+.top-nav h1 {
+  padding-left: 21vw;
+  padding-top: 0.4rem;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 2px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.logo-company {
+  height: 124px;
+  width: 130px;
+
+  border-radius: 50%;
+  padding: 19px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  position: fixed;
+  right: 0;
+  float: right;
+  color: black;
+  margin-right: 1.2rem;
+  padding-top: 0.5rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/*nav item css*/
+.side-icon {
+  padding-top: 18px;
+  font-size: 33px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.side-menu {
+  height: 100vh;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #d9ebf5; */
+  box-shadow: 0 0 1px rgb(0 0 0 / 75%);
+  box-shadow: 0 0 10px #d9d9d9;
+  transition: 0.5s;
+}
+
+.nav-item {
+  padding: 10px;
+  margin-top: 0.5rem;
+}
+
+.nav-ul {
+  list-style: none;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.side-menu li {
+  padding: 20px;
+  margin-top: 0.4rem;
+  color: black;
+  font-size: 17.5px;
+  font-weight: 600;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  margin-left: 2rem;
+}
+
+.side-menu .icon {
+  padding-right: 18px;
+}
+
+.side-menu li:hover {
+  background-color: #ddd;
+  background-color: #ececec;
+  color: black;
+}
+
+.responsive-nav {
+  transform: translate(-100%);
+  transition: transform 500ms;
+}
+
+aside {
+  width: 20vw;
+  transition: all 500ms;
+  height: 100vh;
+  position: fixed;
+
+  background-color: #ffffff;
+  margin-top: -2.5rem;
+}
+
+/* to show side navbar and main content side by side*/
+.page-wrapper {
+  display: flex;
+  padding-top: 40px;
+}
+
+main {
+  padding-left: 20vw;
+  /* margin-top: 40px; */
+  width: 100%;
+  background-color: #f5f6fa;
+}
+
+.nav-link {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+}
+
+.dropdown {
+  padding: 6px;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.dropdown-icon {
+  margin-left: 2.5rem;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding-top: 3px;
+}
+
+.responsive-main {
+  padding-left: 0;
+}
