@@ -15,8 +15,8 @@ export const NavbarData = [
     iconOpened: <RiIcons.RiArrowDownSFill />,
   },
   {
-    title: "Staff",
-    path: "/staffs",
+    title: "Employee",
+    path: "/employee",
     icon: <FaIcons.FaUserFriends />,
     iconClosed: <RiIcons.RiArrowUpSFill />,
     iconOpened: <RiIcons.RiArrowDownSFill />,

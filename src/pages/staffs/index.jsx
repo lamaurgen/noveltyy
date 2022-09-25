@@ -1,22 +1,40 @@
 import React from "react"
 import { useEffect } from "react"
 import { useState } from "react"
-import { connect } from "react-redux"
+import axios from "axios"
 import { Link } from "react-router-dom"
 import { BiDetail } from "react-icons/bi"
 import { AiFillEdit } from "react-icons/ai"
 import { AiOutlineDelete } from "react-icons/ai"
 import { useRef } from "react"
 import { useParams } from "react-router-dom"
+import Layout from "../../components/layout"
+
+
 
 import "./employee.css"
 
-import { SearchBar, Button, Layout, Table, Modal } from "../../components"
+// import { SearchBar, Button, Layout  } from "../../components"
 
 const Employee = () => {
  
-  const [clientId, setClientId] = useState()
-  const [showModal, setShowModal] = useState(false)
+  // const [clientId, setClientId] = useState()
+
+  const[employee, setEmployee] = useState([])
+
+  useEffect( () =>{
+    loadEmployees()
+  }, [])
+
+ const loadEmployees = async  () => {
+    const result =  await axios.get("http://localhost:3000/employee")
+    console.log("api called")
+    console.log("api",result)
+    console.log("data",result.data)
+    setEmployee(result.data)
+ }
+
+  // const [showModal, setShowModal] = useState(false)
 
  
 
@@ -30,62 +48,76 @@ const Employee = () => {
 
       <div className='parent'>
         <div className='searchbox'>
-          <SearchBar
+          {/* <SearchBar
             title='All Clients'
             value='Search client'
             add='Add Clients'
             link='addclient'
-          />
+          /> */}
         </div>
 
         <div className='child-overlap'>
           <div className='list-container'>
-            {/* <Table className="client-table" list={list} colNames={colNames} /> */}
 
-            {/* <Table className="client-table" list={list} /> */}
+            
 
-            {/* <Table className="client-table" list={allclients.map(({ clientName, contactNo, address, representativeName, representativeContactNo }) => {    //to display only username and email
-              return {
-                ["Client Name"]: clientName,
-                contactNo,
-                address,
-                representativeName,
-                representativeContactNo
+<div className="client-table">
+        
+          <table className="table-sort">
+            <thead>
+              <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <th>Phone</th>
+               <th>Email</th>
+               <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              {employee.map((emp, index) => (
+                <tr>
+                  <th>{index +1}</th>
+                  <td>{emp.name}</td>
+                  <td>{emp.phone}</td>
+                  <td>{emp.email}</td>
+                  <td>{emp.address}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+      
+      </div>
 
-              }
-            })}
-            /> */}
-
-            <Table
+            {/* <Table
               className='list-table'
-              list={clients?.map(
+              list={employee?.map(
                 ({
-                  clientId,
-                  clientName,
-                  contactNo,
-                  address,
-                  representiveName,
-                  representiveContactNo,
-                  addedDate,
+                  id,
+                  name,
+                  phone,
+                
+                 email,
+                 address,
+                
+              
                 }) => {
                   return {
-                    ["Name"]: clientName,
-                    ["Contact"]: contactNo,
+                    ["Name"]: name,
+                    ["Contact"]: phone,
+                    ["Email"]:email,
                     address,
-                    ["Representative Name"]: representiveName,
-                    ["Representative Contact"]: representiveContactNo,
-                    ["Date"]: addedDate,
+                  
                     ["Action"]: (
                       <>
                         <Link
-                          to={`/clients/${clientId}`}
+                          to={`/clients/`}
                           className='details-btn'
                         >
                           <BiDetail />
                         </Link>
 
                         <Link
-                          to={`/clients/editclient/${clientId}`}
+                          to={`/clients/editclient/`}
                           className='edit-btn'
                         >
                           <AiFillEdit />
@@ -102,8 +134,8 @@ const Employee = () => {
                   
                   }
                 }
-              )}
-            />
+              )} */}
+            
           </div>
         </div>
       </div>

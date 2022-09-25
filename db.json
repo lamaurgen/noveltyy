@@ -1,0 +1,36 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "Sobhan name",
+      "username": "Sobhan",
+      "email": "sobhan@yahoo.com",
+      "phone": "9893548125",
+      "address":"Boudha"
+     
+    },
+    
+    {
+      "id": 2,
+      "name": "Sobhan name",
+      "username": "Sobhan",
+      "email": "sobhan@yahoo.com",
+      "phone": "9893548125",
+      "address":"Boudha"
+     
+    },
+
+    {
+      "id": 3,
+      "name": "Sobhan name",
+      "username": "Sobhan",
+      "email": "sobhan@yahoo.com",
+      "phone": "9893548125",
+      "address":"Boudha"
+     
+    }
+ 
+   
+  ] 
+  
+}

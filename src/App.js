@@ -10,7 +10,7 @@ import Employee from './pages/staffs';
 function App() {
   return (
     <>
-      
+     
        <BrowserRouter>
        <Routes>
        <Route path='/login' element={<Login />} />

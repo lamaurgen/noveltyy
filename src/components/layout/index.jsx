@@ -19,7 +19,7 @@ const Layout = props => {
   return (
     <div>
       <div className='top-nav'>
-        <h1 className='cms'>Client Management System</h1>
+        <h1 className='cms'>Employee Management System</h1>
 
         <a href='#'>Logout</a>
       </div>
