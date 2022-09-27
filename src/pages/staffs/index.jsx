@@ -11,113 +11,87 @@ import { useParams } from "react-router-dom"
 import Layout from "../../components/layout"
 
 
-
 import "./employee.css"
-
-// import { SearchBar, Button, Layout  } from "../../components"
+import SearchBar from "../../components/common/searchbar"
+import Modal from "../../components/modal"
+import {ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Employee = () => {
- 
-  // const [clientId, setClientId] = useState()
+  
 
-  const[employee, setEmployee] = useState([])
+  const [employee, setEmployee] = useState([])
 
-  useEffect( () =>{
-    loadEmployees()
+  useEffect(() => {
+    getAllEmployees()
   }, [])
 
- const loadEmployees = async  () => {
-    const result =  await axios.get("http://localhost:3000/employee")
-    console.log("api called")
-    console.log("api",result)
-    console.log("data",result.data)
+  const getAllEmployees = async () => {
+    const result = await axios.get("http://localhost:3333/employee/")
+
+    console.log("api", result)
+    console.log("data", result.data)
     setEmployee(result.data)
- }
-
-  // const [showModal, setShowModal] = useState(false)
-
- 
+  }
+  const handleDelete = async id => {
+    await axios.delete(`http://localhost:3333/employee/${id}`)
 
 
+    toast.info(" Employee deleted", {
+      position:"bottom-right"
+    })
+    var newEmployee = employee.filter(item => {
+      return item.id !== id
+    })
+    setEmployee(newEmployee)
+  }
 
-  // const colNames = ['ID', 'Name', 'Phone', 'Email', 'Address', 'Status', 'Action']
+  
   return (
     <Layout>
-   
-    
 
       <div className='parent'>
         <div className='searchbox'>
-          {/* <SearchBar
-            title='All Clients'
-            value='Search client'
-            add='Add Clients'
-            link='addclient'
-          /> */}
+          <SearchBar
+            title='All Employee'
+            value='Search employee'
+            add='Add Employee'
+            link='/addemployee'
+          />
         </div>
 
         <div className='child-overlap'>
           <div className='list-container'>
-
-            
-
-<div className="client-table">
-        
-          <table className="table-sort">
-            <thead>
-              <tr>
-               <th>ID</th>
-               <th>Name</th>
-               <th>Phone</th>
-               <th>Email</th>
-               <th>Address</th>
-              </tr>
-            </thead>
-            <tbody>
-              {employee.map((emp, index) => (
-                <tr>
-                  <th>{index +1}</th>
-                  <td>{emp.name}</td>
-                  <td>{emp.phone}</td>
-                  <td>{emp.email}</td>
-                  <td>{emp.address}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-      
-      </div>
-
-            {/* <Table
-              className='list-table'
-              list={employee?.map(
-                ({
-                  id,
-                  name,
-                  phone,
-                
-                 email,
-                 address,
-                
-              
-                }) => {
-                  return {
-                    ["Name"]: name,
-                    ["Contact"]: phone,
-                    ["Email"]:email,
-                    address,
-                  
-                    ["Action"]: (
-                      <>
+            <div className='empolyee-table'>
+              <table className='table-sort'>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {employee.map((emp, index) => (
+                    <tr>
+                      <th>{index + 1}</th>
+                      <td>{emp.name}</td>
+                      <td>{emp.phone}</td>
+                      <td>{emp.email}</td>
+                      <td>{emp.address}</td>
+                      <td>
                         <Link
-                          to={`/clients/`}
+                          to={`/viewemployee/${emp.id}`}
                           className='details-btn'
                         >
                           <BiDetail />
                         </Link>
 
                         <Link
-                          to={`/clients/editclient/`}
+                          to={`/editemployee/${emp.id}`}
                           className='edit-btn'
                         >
                           <AiFillEdit />
@@ -125,23 +99,25 @@ const Employee = () => {
 
                         <button
                           className='delete-btn'
-                        
+                          onClick={() => handleDelete(emp.id)}
                         >
                           <AiOutlineDelete />
                         </button>
-                      </>
-                    ),
-                  
-                  }
-                }
-              )} */}
-            
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+
           </div>
         </div>
       </div>
-     </Layout>
-  
+      <ToastContainer
+        autoClose ={500000}/>
+    </Layout>
   )
 }
 
-export default Employee 
+export default Employee

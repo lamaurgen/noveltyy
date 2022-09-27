@@ -2,35 +2,35 @@
   "employee": [
     {
       "id": 1,
-      "name": "Sobhan name",
-      "username": "Sobhan",
-      "email": "sobhan@yahoo.com",
-      "phone": "9893548125",
-      "address":"Boudha"
-     
+      "name": "Urgen Lama",
+      "username": "urgenn",
+      "email": "urgenlama33@gmail.com",
+      "phone": "9860355628",
+      "address": "Bouddha"
     },
-    
     {
-      "id": 2,
-      "name": "Sobhan name",
-      "username": "Sobhan",
-      "email": "sobhan@yahoo.com",
-      "phone": "9893548125",
-      "address":"Boudha"
-     
+      "name": "Novelty Tech",
+      "username": "novelty",
+      "phone": "014790802",
+      "email": "novelty@gmail.com",
+      "address": "New Banewshwor",
+      "id": 2
     },
-
     {
-      "id": 3,
-      "name": "Sobhan name",
-      "username": "Sobhan",
-      "email": "sobhan@yahoo.com",
-      "phone": "9893548125",
-      "address":"Boudha"
-     
+      "name": "Test",
+      "username": "test",
+      "phone": "014498390",
+      "email": "test@gmail.com",
+      "address": "Pulchowk",
+      "id": 3
+    },
+    {
+      "name": "Demo",
+      "username": "demo",
+      "phone": "9800127658",
+      "email": "demo@gmail.com",
+      "address": "Thapathali",
+      "id": 4
     }
- 
-   
-  ] 
-  
+  ]
 }

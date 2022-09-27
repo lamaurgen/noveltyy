@@ -2,27 +2,28 @@ import React from "react"
 import "./common.css"
 import * as BsIcons from "react-icons/bs"
 import * as AiIcons from "react-icons/ai"
+import { Link } from "react-router-dom"
 
-const Searchbar = props => {
+const SearchBar = props => {
   return (
     <div className='search'>
-      <div className='search-client'>
+      <div className='search-emp'>
         <label> {props.title}</label>
         <input type='text' />
 
         <button type='submit'>
           <icon className='search-icon'>
-            <BsIcons.BsSearch />{" "}
+            <BsIcons.BsSearch />
           </icon>
         </button>
-        <a href=''>
+        <Link to={props.link}>
           <AiIcons.AiOutlineUserAdd />
 
           {props.add}
-        </a>
+        </Link>
       </div>
     </div>
   )
 }
 
-export default Searchbar
+export default SearchBar

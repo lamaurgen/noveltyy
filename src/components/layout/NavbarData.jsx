@@ -23,7 +23,7 @@ export const NavbarData = [
 
     subNav: [
       {
-        title: "Add staff",
+        title: "Add Employee",
         path: "/addclient",
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
@@ -34,8 +34,14 @@ export const NavbarData = [
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
       },
-     
     ],
+  },
+  {
+    title: "Add Employee",
+    path: "/addemployee",
+    icon: <FaIcons.FaFileInvoice />,
+    iconClosed: <RiIcons.RiArrowUpSFill />,
+    iconOpened: <RiIcons.RiArrowDownSFill />,
   },
   {
     title: "Project",
@@ -59,6 +65,4 @@ export const NavbarData = [
       },
     ],
   },
-
-  
 ]

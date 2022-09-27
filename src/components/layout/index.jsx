@@ -10,8 +10,6 @@ const Layout = props => {
   const mainref = useRef()
   const hamburgerRef = useRef()
 
-  
-
   const showSidebar = () => {
     navref.current.classList.toggle("responsive-nav")
     mainref.current.classList.toggle("responsive-main")
@@ -28,9 +26,7 @@ const Layout = props => {
         <Navbar navref={navref} />
 
         {/* body part of different page which is passed dynamically in same layout */}
-        <main ref={mainref}>
-          <Outlet />
-        </main>
+        <main ref={mainref}> {props.children}</main>
       </div>
     </div>
   )

@@ -3,24 +3,21 @@
   width: 100%;
   z-index: -1;
   background-color: #87bdd8;
-  height: 6vh;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   position: fixed;
   background-color: #8c99e0;
   box-shadow: 5px 3px 5px #f2f4fc;
   box-shadow: 0 0px 15px #8c99e0;
-
-  /* box-shadow: 0 1px 1px #7f89be,
-              0 2px 2px #7f89be,  */
 }
 
 .top-nav h1 {
   padding-left: 21vw;
-  padding-top: 0.4rem;
-  font-size: 18px;
+
+  font-size: 16px;
   font-weight: 600;
-  padding-bottom: 2px;
+
 }
 
 .logo {
@@ -45,7 +42,7 @@
   color: black;
   margin-right: 1.2rem;
   padding-top: 0.5rem;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -63,7 +60,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* background-color: #d9ebf5; */
   box-shadow: 0 0 1px rgb(0 0 0 / 75%);
   box-shadow: 0 0 10px #d9d9d9;
   transition: 0.5s;
@@ -76,27 +72,27 @@
 
 .nav-ul {
   list-style: none;
-  margin-top: 0.5rem;
+  margin-top: 3.5rem;
   margin-left: 0.5rem;
 }
 
 .side-menu li {
-  padding: 20px;
+  padding: 10px;
   margin-top: 0.4rem;
   color: black;
-  font-size: 17.5px;
-  font-weight: 600;
+  font-size: 14.5px;
+  font-weight: 400;
 }
 
 .side-menu a {
   text-decoration: none;
   color: black;
   display: flex;
-  margin-left: 2rem;
+  
 }
 
 .side-menu .icon {
-  padding-right: 18px;
+  padding-right: 4px;
 }
 
 .side-menu li:hover {
@@ -128,9 +124,9 @@ aside {
 
 main {
   padding-left: 20vw;
-  /* margin-top: 40px; */
+  
   width: 100%;
-  background-color: #f5f6fa;
+  
 }
 
 .nav-link {
@@ -154,7 +150,7 @@ main {
 }
 
 .dropdown-icon {
-  margin-left: 2.5rem;
+  margin-left: 0.5rem;
   background: transparent;
   border: none;
   font-size: 16px;

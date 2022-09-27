@@ -1,0 +1,108 @@
+
+
+.register {
+
+    width: 70%;
+    padding: 3% 0 0;
+    margin: auto;
+}
+
+.register-form{
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 50%;
+    margin: 0 auto 100px;
+    padding: 30px;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+}
+
+.register-form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #F4F6F9;
+
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 1rem;
+    border-radius: 10px;
+
+  }
+
+
+
+
+
+.row>h2 {
+    color: #8C99E0;
+    text-align: center;
+
+
+}
+
+
+
+.row-1 {
+    margin-left: 2.5rem;
+    margin-left: 4rem;
+}
+
+.submit {
+    margin-top: 0.5rem;
+    margin-left: 10rem;
+}
+
+.btn {
+    transition: all .5s ease;
+    width: 60%;
+    border-radius: 10px;
+
+    font-weight: 600;
+
+
+    border: 1px solid #8C99E0;
+    outline: none;
+    cursor: pointer;
+
+background-color: #8C99E0;
+border: none;
+    height: 35px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+.row a {
+    text-decoration: none;
+    color: #8C99E0;
+}
+
+.row-bottom {
+
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+.rows {
+    /* margin-top: 1rem; */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.rows a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+
+
+
+
+
+}

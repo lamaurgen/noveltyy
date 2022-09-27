@@ -22,10 +22,10 @@ const Dashboard = () => {
           <div className='dashboard-content box stack-top'>
             <div className='box-container'>
 
-              <Box style="inner-box" num='12332' name="Total Orders" icon={<AiIcons.AiOutlineShoppingCart />} />
-              <Box style="inner-box" num='12332' name="Total Supplies" icon={<FcIcons.FcSalesPerformance />} />
-              <Box style="inner-box" num='12332' name="Total Sales" icon={<CgIcons.CgDollar />} />
-              <Box style="inner-box" num='1332' name="Total Clients" icon={<CgIcons.CgDollar />} />
+              <Box style="inner-box" num='12332' name="Total Employee" icon={<AiIcons.AiOutlineShoppingCart />} />
+              <Box style="inner-box" num='12332' name="Total Leave" icon={<FcIcons.FcSalesPerformance />} />
+              <Box style="inner-box" num='12332' name="Total Project" icon={<CgIcons.CgDollar />} />
+
             </div>
 
           </div>
@@ -34,13 +34,18 @@ const Dashboard = () => {
 
         <div className='dashboard-body'>
           <div className='recent-work  box1'>
-            <p> Recent work</p>
+            <p> Recent Project</p>
             <ul className='work-list'>
-              <li>Beauty Hub</li>
+              <li>Novelty</li>
               <li>Walling </li>
+              <li>Red Furniture </li>
+              <li>Ncell </li>
+              <li>Apple</li>
             </ul>
           </div>
-          <div className='chart box1'> <p> Bar chart</p></div>
+          <div className='chart box1'> <p> Bar chart</p>
+          <img src="./public/bar.jpg" alt="bar" />
+          </div>
 
         </div>
 

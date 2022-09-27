@@ -1,0 +1,124 @@
+.containers {
+   padding: 1rem;
+   margin: 0.5rem auto;
+
+
+}
+
+.employee {
+    margin-top: 1rem;
+
+}
+
+.add-employee p {
+    display: block;
+    padding: 0.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    
+
+}
+
+
+/*add employees css*/
+.containers {
+
+
+    padding: 1em;
+
+    margin: 1px auto;
+
+
+}
+
+.view-main {
+    display: grid;
+    grid-template-columns: 400px 400px;
+
+
+    margin-left: 1rem;
+}
+
+.view p {
+    font-size: 14px;
+
+
+}
+
+.view .title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.status {
+    grid-column-end: 1;
+    background-color: #04AA6D;
+    width: 55px;
+    border-radius: 8px;
+    padding: 3px;
+    text-align: center;
+    color: white;
+}
+
+.bottom-detail {
+    /* background-color: #f7f3f3; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.3rem;
+
+}
+
+.bottom-detail button {
+
+    /* justify-content: center; */
+
+    padding: 20px;
+    border-radius: 3px;
+    margin: 1rem;
+
+
+}
+
+.bottom-detail button:hover {
+    background-color: #F8F8FF;
+    color: black;
+}
+
+.bottom-detail a:hover {
+    background-color: #F8F8FF;
+    color: black;
+}
+
+
+.bottom-detail .edit {
+    background-color: #3C8DBC;
+    border: none;
+    padding: 4px 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.bottom-detail .back {
+    background-color: #04AA6D;
+    border: none;
+    text-decoration: none;
+    padding: 4px 15px;
+    font-size: 14px;
+    margin-left: 3vw;
+}
+
+.bottom-detail a {
+    color: white;
+    padding: 8px;
+
+}
+
+
+
+.main {
+    margin: 1rem;
+
+    box-shadow: 0px 0px 1px #888888;
+
+}

@@ -10,11 +10,10 @@ const FormGroup = props => {
     name,
     labelname,
     style,
+    placeholder,
   } = props
 
-  // const validate = (e, name) => {
-  //   !e.target.value ? setError({ [name.toLowerCase()]: "*required " + name }) : setError("")
-  // }
+ 
   return (
     <div>
       <label className={style}>{labelname}</label>

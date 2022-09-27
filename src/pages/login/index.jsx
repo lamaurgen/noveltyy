@@ -1,11 +1,12 @@
-
 import React, { useState } from "react"
 
 import { useFormik } from "formik"
 import { useEffect } from "react"
-import './login.css'
+import "./login.css"
+import { useNavigate } from "react-router-dom"
 
 import FormGroup from "../../components/form-group"
+import Dashboard from "../dashboard"
 
 const validate = values => {
   const errors = {}
@@ -25,8 +26,9 @@ const validate = values => {
 }
 
 const Login = () => {
+  const [dashboard, setDashboard] = useState(true)
   const [errorMessage, setErrorMessage] = useState("")
- 
+  const navigate = useNavigate()
 
   const formik = useFormik({
     initialValues: {
@@ -34,19 +36,32 @@ const Login = () => {
       password: "",
     },
     validate,
-   
-    
+    onSubmit: (values) => {
+      let user = localStorage.getItem("username")
+      let pass = localStorage.getItem("Password")
+
+      if (!values.username || !values.password) {
+        // setFlag(true);
+        console.log("empty")
+      } else if (values.username !== user || values.password !== pass) {
+        // setFlag(true);
+        console.log("invalid details")
+      } else {
+
+        console.log("successfully Loged in")
+      navigate("/")
+        // setFlag(false);
+
+
+        console.log("successfully Loged in")
+      }
+    },
   })
-
-  
-
 
   return (
     <div className='login'>
-  
       <div className='login-form'>
         <form onSubmit={formik.handleSubmit}>
-        
           <FormGroup
             id='username'
             name='username'
@@ -76,15 +91,11 @@ const Login = () => {
           {errorMessage}
           <button className='btn' type='submit'>
             Login
-      
           </button>
-        
         </form>
       </div>
     </div>
   )
-          }
-
-
+}
 
 export default Login
